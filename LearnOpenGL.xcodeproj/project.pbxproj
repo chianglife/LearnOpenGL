@@ -14,10 +14,23 @@
 		1E6CED602872D2820023D70D /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CED5F2872D2820023D70D /* libglfw3.a */; };
 		1E6CED682872D5120023D70D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CED672872D5120023D70D /* Cocoa.framework */; };
 		1E6CED6A2872D51F0023D70D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E6CED692872D51F0023D70D /* IOKit.framework */; };
+		1E898D892890EE92000DBD2A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E898D882890EE92000DBD2A /* main.cpp */; };
+		1E898D8F2890EF15000DBD2A /* shaders.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E898D8D2890EF15000DBD2A /* shaders.cpp */; };
+		1E898D92289116F9000DBD2A /* window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E898D90289116F9000DBD2A /* window.cpp */; };
+		1E898D9528912813000DBD2A /* triangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E898D9328912813000DBD2A /* triangle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1E6CED442872D0A60023D70D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1E898D842890EE92000DBD2A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -41,6 +54,14 @@
 		1E6CED5F2872D2820023D70D /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "../../../Downloads/glfw-3.3.7.bin.MACOS/lib-arm64/libglfw3.a"; sourceTree = "<group>"; };
 		1E6CED672872D5120023D70D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1E6CED692872D51F0023D70D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		1E898D862890EE92000DBD2A /* shaders */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = shaders; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E898D882890EE92000DBD2A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1E898D8D2890EF15000DBD2A /* shaders.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = shaders.cpp; sourceTree = "<group>"; };
+		1E898D8E2890EF15000DBD2A /* shaders.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = shaders.hpp; sourceTree = "<group>"; };
+		1E898D90289116F9000DBD2A /* window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = window.cpp; sourceTree = "<group>"; };
+		1E898D91289116F9000DBD2A /* window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = window.hpp; sourceTree = "<group>"; };
+		1E898D9328912813000DBD2A /* triangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = triangle.cpp; sourceTree = "<group>"; };
+		1E898D9428912813000DBD2A /* triangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = triangle.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +77,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E898D832890EE92000DBD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6CED482872D0A60023D70D /* LearnOpenGL */,
+				1E898D872890EE92000DBD2A /* shaders */,
 				1E6CED472872D0A60023D70D /* Products */,
 				1E6CED502872D0EA0023D70D /* Frameworks */,
 			);
@@ -72,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1E6CED462872D0A60023D70D /* LearnOpenGL */,
+				1E898D862890EE92000DBD2A /* shaders */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,6 +111,12 @@
 			children = (
 				1E6CED552872D1A90023D70D /* Include */,
 				1E6CED492872D0A60023D70D /* main.cpp */,
+				1E898D90289116F9000DBD2A /* window.cpp */,
+				1E898D91289116F9000DBD2A /* window.hpp */,
+				1E898D9328912813000DBD2A /* triangle.cpp */,
+				1E898D9428912813000DBD2A /* triangle.hpp */,
+				1E898D8D2890EF15000DBD2A /* shaders.cpp */,
+				1E898D8E2890EF15000DBD2A /* shaders.hpp */,
 			);
 			path = LearnOpenGL;
 			sourceTree = "<group>";
@@ -133,6 +169,14 @@
 			path = KHR;
 			sourceTree = "<group>";
 		};
+		1E898D872890EE92000DBD2A /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				1E898D882890EE92000DBD2A /* main.cpp */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,6 +197,23 @@
 			productReference = 1E6CED462872D0A60023D70D /* LearnOpenGL */;
 			productType = "com.apple.product-type.tool";
 		};
+		1E898D852890EE92000DBD2A /* shaders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E898D8C2890EE92000DBD2A /* Build configuration list for PBXNativeTarget "shaders" */;
+			buildPhases = (
+				1E898D822890EE92000DBD2A /* Sources */,
+				1E898D832890EE92000DBD2A /* Frameworks */,
+				1E898D842890EE92000DBD2A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = shaders;
+			productName = shaders;
+			productReference = 1E898D862890EE92000DBD2A /* shaders */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +224,9 @@
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					1E6CED452872D0A60023D70D = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					1E898D852890EE92000DBD2A = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
@@ -181,6 +245,7 @@
 			projectRoot = "";
 			targets = (
 				1E6CED452872D0A60023D70D /* LearnOpenGL */,
+				1E898D852890EE92000DBD2A /* shaders */,
 			);
 		};
 /* End PBXProject section */
@@ -190,8 +255,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E898D8F2890EF15000DBD2A /* shaders.cpp in Sources */,
 				1E6CED4A2872D0A60023D70D /* main.cpp in Sources */,
 				1E6CED5E2872D2310023D70D /* glad.c in Sources */,
+				1E898D9528912813000DBD2A /* triangle.cpp in Sources */,
+				1E898D92289116F9000DBD2A /* window.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E898D822890EE92000DBD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E898D892890EE92000DBD2A /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +413,26 @@
 			};
 			name = Release;
 		};
+		1E898D8A2890EE92000DBD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DP923K294H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E898D8B2890EE92000DBD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DP923K294H;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,6 +450,15 @@
 			buildConfigurations = (
 				1E6CED4E2872D0A60023D70D /* Debug */,
 				1E6CED4F2872D0A60023D70D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1E898D8C2890EE92000DBD2A /* Build configuration list for PBXNativeTarget "shaders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E898D8A2890EE92000DBD2A /* Debug */,
+				1E898D8B2890EE92000DBD2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
