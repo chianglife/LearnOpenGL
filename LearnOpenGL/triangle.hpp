@@ -7,9 +7,13 @@
 
 #ifndef triangle_hpp
 #define triangle_hpp
-
+#include <shader.h>
 #include <stdio.h>
-void pipeline();
-void draw_now();
+//class Triangle {
+//public:
+    void pipeline();
+    void draw_now();
+//};
+
 #endif /* triangle_hpp */
 

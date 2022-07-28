@@ -9,7 +9,7 @@
 #include "triangle.hpp"
 
 int main(int argc, const char * argv[]) {
-    int r = initWindow(pipeline,draw_now);
+    int r = initWindow(pipeline, draw_now);
     return r;
 }
 

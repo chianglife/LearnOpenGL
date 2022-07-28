@@ -38,11 +38,13 @@ int initWindow(pipline pipline, draw draw) {
     glViewport(0, 0, 800, 600);//设置OpenGL渲染窗口的尺寸大小
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);//每当窗口调整大小的时候改变视口的大小
     
-    pipline();//管线流程
+    Shader ourShader = Shader("shader.vs", "shader.fs");
+    pipeline();//管线流程
     
     while(!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT);
+        ourShader.use();
         draw();//绘制
 
         glfwSwapBuffers(window);//交换颜色缓冲（它是一个储存着GLFW窗口每一个像素颜色值的大缓冲），它在这一迭代中被用来绘制，并且将会作为输出显示在屏幕上
